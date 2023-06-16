@@ -1,0 +1,1 @@
+This application utilizes an icon for visual representation, which have been sourced from the https://fontawesome.com/ and are not owned by me. The icon used is solely for the purpose of enhancing the user interface and providing a more engaging experience. All credits for the icons go to their respective creators and designers.

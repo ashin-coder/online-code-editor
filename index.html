@@ -1,0 +1,115 @@
+<!-- HTML Document for Online Code Editor web application -->
+
+<!DOCTYPE html>
+
+<!-- The following HTML code represents the structure of the online code editor web application -->
+<html>
+
+<head>
+
+  <title> ONLINE CODE EDITOR </title>
+  <link rel="icon" type="resources/icon/x-icon" href="resources/icon/laptop-code-solid.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://kit.fontawesome.com/205d4d78e7.js" crossorigin="anonymous"></script>
+
+  <!-- External CSS Stylesheet -->
+  <link id="style" rel="stylesheet" href="style.css" />
+  <link id="style2" rel="stylesheet" href="style2.css" disabled="disabled" />
+
+  <!-- CodeMirror JavaScript Library and CSS  -->
+  <script src="codemirror-5.65.3/lib/codemirror.js"></script>
+  <link href="codemirror-5.65.3/lib/codemirror.css" rel="stylesheet" />
+  <script src="codemirror-5.65.3/mode/xml/xml.js"></script>
+  <script src="codemirror-5.65.3/mode/css/css.js"></script>
+  <script src="codemirror-5.65.3/mode/javascript/javascript.js"></script>
+  <script src="codemirror-5.65.3/addon/display/placeholder.js"></script>
+  <script src="codemirror-5.65.3/addon/edit/closetag.js"></script>
+  <link href="codemirror-5.65.3/theme/ayu-dark.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <h1>ONLINE CODE EDITOR <i class="fa-solid fa-laptop-code"></i></h1>
+
+  <div class="navbar">
+
+    <button id="HTMLdownload"><i class='fas fa-file-download' style='color: white'></i> HTML <i class='fa fa-html5'
+        style='color: red'></i>
+
+</HTML></button>
+<button id="CSSdownload"><i class='fas fa-file-download' style='color: white'></i> CSS <i class='fa fa-css3'
+    style='color: blue'></i>
+
+  </HTML></button>
+<button id="JSdownload"><i class='fas fa-file-download' style='color: white'></i> JavaScript <i class="fab fa-js"
+    style='color: yellow'></i>
+
+  </HTML></button>
+<button id="reset" onclick="resetFunction()">Reset <i class="fas fa-undo"></i></button>
+<button id="layout" onclick="toggle()">Layout <i class="fa-solid fa-table"></i></button>
+
+<div class="dropdown">
+  <button class="dropbtn">Open File <i class="fa fa-caret-down"></i>
+  </button>
+
+  <div class="dropdown-content">
+
+
+    <label class="htmlfileupload"><i class='fas fa-file-import' style='color: white'></i> HTML <i class='fa fa-html5'
+        style='color: red'></i>
+      <input id="htmlopen" style="display:none" type="file" onchange="htmllocalLoad(this.files);">
+    </label>
+
+    <label class="cssfileupload"><i class='fas fa-file-import' style='color: white'></i> CSS <i class='fa fa-css3'
+        style='color: blue'></i>
+      <input id="cssopen" style="display:none" type="file" onchange="csslocalLoad(this.files);">
+    </label>
+
+
+    <label class="javafileupload"><i class='fas fa-file-import' style='color: white'></i> JavaScript <i
+        class="fab fa-js" style='color: yellow'></i>
+      <input id="jsopen" style="display:none" type="file" onchange="jslocalLoad(this.files);">
+    </label>
+
+  </div>
+</div>
+
+
+<div class="dropdown2">
+  <button class="dropbtn2">More
+    <i class="fa fa-caret-down"></i>
+  </button>
+
+  <div class="dropdown-content2">
+    <a href="https://www.w3schools.com/html/" target="_blank">HTMl Tutorials <i class='fa fa-html5'
+        style='color: red'></i></a>
+    <a href="https://www.w3schools.com/css/" target="_blank">CSS Tutorials <i class='fa fa-css3'
+        style='color: blue'></i></a>
+    <a href="https://www.w3schools.com/js/" target="_blank">JavaScript Tutorials <i class="fab fa-js"
+        style='color: yellow'></i></a>
+  </div>
+
+</div>
+
+
+</div>
+<div class="inout">
+  <div class="codearea">
+
+    <textarea id="html" placeholder="Enter HTML Code here" wrap="off"></textarea>
+    <textarea id="css" placeholder="Enter CSS Code here" wrap="off"></textarea>
+    <textarea id="js" placeholder="Enter JavaScript Code here" wrap="off"></textarea>
+
+  </div>
+
+  <div class="preview">
+    <iframe id="code" allowfullscreen></iframe>
+  </div>
+</div>
+<!-- JavaScript Code -->
+<script type="text/javascript" src="app.js"></script>
+
+</body>
+
+</html>
